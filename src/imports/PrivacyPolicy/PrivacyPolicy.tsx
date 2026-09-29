@@ -259,7 +259,7 @@ function Frame3() {
         <p className="font-['Helvetica:Bold',sans-serif] leading-[28px] mb-0 text-[#306abc] text-[36px] whitespace-pre-wrap">Privacy Policy</p>
         <p className="leading-[28px] mb-0 text-[36px] whitespace-pre-wrap">​</p>
         <p className="font-['Helvetica:Bold',sans-serif] leading-[28px] mb-0 text-[#306abc] text-[16px] whitespace-pre-wrap">TERMS OF USE</p>
-        <p className="leading-[28px] mb-0 text-[14px] whitespace-pre-wrap">HouseCall MD (“we,” “us,” or “our”) provides this website (“Site”) to you conditioned on your acceptance without modification of the terms, conditions, and notices contained herein. Your use of this Site constitutes your agreement to all such terms, conditions, and notices.</p>
+        <p className="leading-[28px] mb-0 text-[14px] whitespace-pre-wrap">Platinum Medical Evaluations (“we,” “us,” or “our”) provides this website (“Site”) to you conditioned on your acceptance without modification of the terms, conditions, and notices contained herein. Your use of this Site constitutes your agreement to all such terms, conditions, and notices.</p>
         <p className="font-['Helvetica:Bold',sans-serif] leading-[28px] mb-0 text-[#306abc] text-[16px] whitespace-pre-wrap">MODIFICATIONS OF THESE TERMS OF USE</p>
         <p className="leading-[28px] mb-0 text-[14px] whitespace-pre-wrap">We reserve the right to change the terms, conditions, and notices under which this Site is offered, including but not limited to the charges associated with the use of this Site.</p>
         <p className="font-['Helvetica:Bold',sans-serif] leading-[28px] mb-0 text-[#306abc] text-[16px] whitespace-pre-wrap">LINKS TO THIRD PARTY SITES</p>

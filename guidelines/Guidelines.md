@@ -1,61 +1,32 @@
-**Add your own guidelines here**
-<!--
+# Accessibility guidelines (WCAG 2.1 AA)
 
-System Guidelines
+Apply these rules on every change to the Platinum Medical Evaluations site. Target is **WCAG 2.1 Level AA**.
 
-Use this file to provide the AI with rules and guidelines you want it to follow.
-This template outlines a few examples of things you can add. You can add your own sections and format it to suit your needs
+## Must follow
 
-TIP: More context isn't always better. It can confuse the LLM. Try and add the most important rules you need
+* One `<h1>` per page; nest headings logically (do not skip levels).
+* Unique, descriptive `document.title` per route.
+* Descriptive link and button text — no “click here” / bare “learn more” for primary actions.
+* Meaningful `alt` on informative images (e.g. logos: brand name). Decorative images use `alt=""` and `aria-hidden` where appropriate.
+* Body text contrast ≥ 4.5:1; large text ≥ 3:1. Do not convey meaning by color alone.
+* Visible `:focus-visible` outline on all interactive controls. Never remove outline without a replacement.
+* “Skip to main content” link as the first focusable element; page content in `<main id="main-content">`.
+* Use semantic landmarks: `<header>`, `<nav>`, `<main>`, `<footer>`.
+* Forms: every field has a programmatically associated `<label>`; required fields marked with text (“Required”) plus `required` / `aria-required`; errors are specific, tied with `aria-invalid` / `aria-describedby`, and announced (`role="alert"`).
+* In-page navigation should move keyboard focus to the target section.
+* Respect `prefers-reduced-motion` for smooth scrolling and decorative motion.
 
-# General guidelines
+## Out of scope for this codebase (until built or vendor-integrated)
 
-Any general rules you want the AI to follow.
-For example:
+Patient portal / MFA, appointment scheduling widgets, billing / pay-online, telehealth UI, downloadable PDFs, video/audio captions, multi-location microsites, and third-party embeds (require vendor VPAT).
 
-* Only use absolute positioning when necessary. Opt for responsive and well structured layouts that use flexbox and grid by default
-* Refactor code as you go to keep code clean
-* Keep file sizes small and put helper functions and components in their own files.
+## Testing cadence
 
---------------
+* Automated scan (axe / WAVE): every deploy + monthly
+* Keyboard-only pass: quarterly
+* Screen reader pass (NVDA / VoiceOver): quarterly, focus on contact form
+* 200% zoom check: quarterly
+* Contrast audit: on any design/brand update
+* Full manual WCAG 2.1 AA audit: annually (or after a demand letter)
 
-# Design system guidelines
-Rules for how the AI should make generations look like your company's design system
-
-Additionally, if you select a design system to use in the prompt box, you can reference
-your design system's components, tokens, variables and components.
-For example:
-
-* Use a base font-size of 14px
-* Date formats should always be in the format “Jun 10”
-* The bottom toolbar should only ever have a maximum of 4 items
-* Never use the floating action button with the bottom toolbar
-* Chips should always come in sets of 3 or more
-* Don't use a dropdown if there are 2 or fewer options
-
-You can also create sub sections and add more specific details
-For example:
-
-
-## Button
-The Button component is a fundamental interactive element in our design system, designed to trigger actions or navigate
-users through the application. It provides visual feedback and clear affordances to enhance user experience.
-
-### Usage
-Buttons should be used for important actions that users need to take, such as form submissions, confirming choices,
-or initiating processes. They communicate interactivity and should have clear, action-oriented labels.
-
-### Variants
-* Primary Button
-  * Purpose : Used for the main action in a section or page
-  * Visual Style : Bold, filled with the primary brand color
-  * Usage : One primary button per section to guide users toward the most important action
-* Secondary Button
-  * Purpose : Used for alternative or supporting actions
-  * Visual Style : Outlined with the primary color, transparent background
-  * Usage : Can appear alongside a primary button for less important actions
-* Tertiary Button
-  * Purpose : Used for the least important actions
-  * Visual Style : Text-only with no border, using primary color
-  * Usage : For actions that should be available but not emphasized
--->
+Log date, pages covered, issues found, and resolution date for each test.
